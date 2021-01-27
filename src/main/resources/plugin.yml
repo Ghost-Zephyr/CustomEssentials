@@ -1,0 +1,13 @@
+name: CustomEssentials
+main: dev.bitsnthings.mc.cess.CustomEssentials
+version: 1.0
+api-version: 1.13
+commands:
+  cess:
+    description: Manage CustomEssentials.
+    useage: /cess
+    permission: cessentials.cess
+  mute:
+    description: Mute a player in chat.
+    usage: /mute <player>
+    permission: cessentials.mute
