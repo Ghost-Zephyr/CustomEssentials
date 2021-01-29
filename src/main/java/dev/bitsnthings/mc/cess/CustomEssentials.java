@@ -1,7 +1,7 @@
 package dev.bitsnthings.mc.cess;
 
-import dev.bitsnthings.mc.cess.events.*;
 import dev.bitsnthings.mc.cess.commands.*;
+import dev.bitsnthings.mc.cess.events.*;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.Bukkit;
@@ -26,6 +26,9 @@ public class CustomEssentials extends JavaPlugin {
 
   }
 
+  public Config getInternalConfig() {
+    return config;
+  }
   public Logger getLogger() {
 		return logger;
 	}

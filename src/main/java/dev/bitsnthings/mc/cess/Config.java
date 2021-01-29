@@ -33,6 +33,6 @@ public final class Config {
 	}
 
 	public void setMOTD(String message) {
-		this.messageOfTheDay = message;
+		messageOfTheDay = message;
 	}
 }

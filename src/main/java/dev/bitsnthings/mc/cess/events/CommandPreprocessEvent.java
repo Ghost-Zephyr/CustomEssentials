@@ -18,7 +18,7 @@ public class CommandPreprocessEvent implements Listener {
     String message = event.getMessage();
     String command = message.split(" ")[0];
     if (command.equals("/tellraw")) {
-      event.setCancelled​(true);
+      event.setCancelled(true);
       sender.sendMessage(String.format("%sYou're not allowed to use this command!", ChatColor.RED));
       return;
     }
