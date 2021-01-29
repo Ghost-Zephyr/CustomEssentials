@@ -23,7 +23,7 @@ public final class Config {
   }
   */
 	public void setDefaults() {
-    config.addDefault(MOTD_KEY, String.format("%s%sWelcome to this absolutely fantastic server!\nbruh", ChatColor.BOLD, ChatColor.AQUA));
+    config.addDefault(MOTD_KEY, String.format("%s%sWelcome to this absolutely fantastic server!", ChatColor.BOLD, ChatColor.AQUA));
     config.options().copyDefaults(true);
     CustomEssentials.getInstance().saveConfig();
   }
