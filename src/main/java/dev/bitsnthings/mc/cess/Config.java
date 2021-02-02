@@ -5,7 +5,10 @@ import org.bukkit.ChatColor;
 
 public final class Config {
   private static FileConfiguration config;
-	private static final String MOTD_KEY = "motd";
+  private static final String MOTD_KEY = "motd";
+  private static final String MSG_CMD_FORMAT_KEY = "msgCmdFormat";
+
+  public String msgCmdFormat;
 
   public static String messageOfTheDay;
 	public Config() {
@@ -15,7 +18,8 @@ public final class Config {
 	}
 
   public void loadConfig(){
-		messageOfTheDay = config.getString(MOTD_KEY);
+    messageOfTheDay = config.getString(MOTD_KEY);
+    msgCmdFormat = config.getString(MSG_CMD_FORMAT_KEY);
   }
   /*
 	public void reloadConfig(){
@@ -24,6 +28,7 @@ public final class Config {
   */
 	public void setDefaults() {
     config.addDefault(MOTD_KEY, String.format("%s%sWelcome to this absolutely fantastic server!", ChatColor.BOLD, ChatColor.AQUA));
+    config.addDefault(MSG_CMD_FORMAT_KEY, "/tellraw %s \"%s%s tells you: %s\"");
     config.options().copyDefaults(true);
     CustomEssentials.getInstance().saveConfig();
   }

@@ -41,7 +41,6 @@
     </dependencies>
     <build>
         <plugins>
-
             <!--
                The first and the most essential plugin is the compiler, that translates your
                human readable code into bytecode.
@@ -59,7 +58,6 @@
                     <target>${java.version}</target>
                 </configuration>
             </plugin>
- 
             <!--
                The second plugin is the shade plugin, packaging every library with
                the "compile" scope (see dependencies)
@@ -80,7 +78,7 @@
                         </goals>
                         <configuration>
                             <createDependencyReducedPom>false</createDependencyReducedPom>
-                            <finalName>${project.name}-${project.version}</finalName>
+                            <finalName>${project.name}-${project.version}-shaded</finalName>
                         </configuration>
                     </execution>
                 </executions>
@@ -96,5 +94,4 @@
             </resource>
         </resources>
     </build>
- 
 </project>

@@ -13,6 +13,7 @@ public class JoinEvent implements Listener {
 	@EventHandler(priority=EventPriority.NORMAL)
 	public void onPlayerJoin(PlayerJoinEvent event) {
     Player player = event.getPlayer();
+    /* Set join message and send the player the message of the day. */
     event.setJoinMessage(String.format("%s%s joined.", ChatColor.GRAY, player.getName()));
     player.sendMessage(Config.messageOfTheDay);
   }

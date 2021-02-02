@@ -11,7 +11,7 @@ import java.util.logging.Logger;
 public class CustomEssentials extends JavaPlugin {
   private final Logger logger = Logger.getLogger("cEssentials");
   private static CustomEssentials plugin;
-  private static Config config;
+  public static Config config;
   @Override
   public void onEnable() {
     plugin = this;
